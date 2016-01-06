@@ -1,0 +1,54 @@
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="rooms">
+
+    <div  class="window">
+        <a href="#" class="window__a_decoration-none" >
+            <span class="window__span_hover-blue window__span_green"> Connect FOUR </span>
+        </a>
+        <div class="window__list">
+            <h4 class = "window__header_align-center_white">Choose room</h4>
+            <table class="roomList">
+                <tr>
+                    <th>
+                        <span class="roomList__item__name">
+                            Room holder
+                        </span>
+                    </th>
+                    <th>
+                        <span class="roomList__item__createDate"> 
+                            Create date
+                        </span>  
+                    </th>
+                    <th></th>
+                </tr>
+                <fest:each iterate="rooms" index="i">                
+                    <tr>
+                        <td>
+                            <span class="roomList__item__name">
+                                <fest:value>rooms[i].holderName</fest:value> 
+                            </span>
+                        </td>
+                        <td>
+                            <span class="roomList__item__createDate"> 
+                                <fest:value>rooms[i].createDate</fest:value> 
+                            </span>
+                        </td>
+                        <td>
+                            <button id="{i}" class="item__playButton js_play_btn">
+                                play
+                            </button>
+                        </td>
+                    </tr>
+                </fest:each>
+            </table>
+        </div>    
+        <div class="window__menu">
+		    <a href="#game" class="window__a_decoration-none">
+		        <button class="window__span_orange window__span_hover-blue js_create_btn">Create game</button>
+		    </a>
+		    <a href="#" class="window__a_decoration-none">
+		        <span class="window__span_orange window__span_hover-blue">Back</span>
+		    </a>
+		</div>
+    </div>
+</fest:template>
+

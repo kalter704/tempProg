@@ -1,0 +1,76 @@
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+    <div class="window">
+		<a href="#" class="window__a_decoration-none">
+            <span class="window__span_green window__span_hover-blue"> Connect FOUR </span>
+    	</a>
+    	
+    	<div class="window__gamefield">
+    	    <div class="gamefield__arrow"></div>
+            <div class="gamefield__columnset">
+                <fest:for from="0" to="6" index="i">
+        	        <div id="{i}" class="gamefield__column column__{i}">
+                        <fest:for from="0" to="5" index="j">
+                	        <div class="column__cell column__{i}__cell__{j} column__cell-{json[i*6 +j].cell} ">
+                                <fest:value> i*6 + j </fest:value>
+                	        </div>  
+                        </fest:for>
+        	        </div>
+        	   </fest:for>
+        	</div>
+    	</div>
+    	
+    	<div class="window__gameinfo">
+    	    <div class="gameinfo__msg">
+    	        Round: <span class="msg__round msg__data">1</span>
+    	    </div>
+    	    <div class="gameinfo__msg"> 
+    	        <span class="msg__turn msg__data">Turn</span>
+    	    </div>
+    	    <div class="gameinfo__msg"> 
+    	        Your chip colour:<span class="msg__chip msg__data">blue</span>
+    	    </div>
+    	    <div class="gameinfo__msg"> 
+    	        Time: <span class="msg__time msg__data">20</span>
+    	    </div>
+    	</div>
+    </div>
+    
+	<div class="window__gamemsg gamemsg__greeting">
+	    <div class="gameinfo__msg">
+	        Are you ready to win,<span class="msg__username msg__data">username</span>?
+	    </div>
+	    <div class="gamemsg__isReady">
+            <!--button class="js_isReady_btn_no">nope</button-->
+            <button class="js_isReady_btn_yes">yeah</button>
+	    </div>
+	</div>
+
+	<div class="window__gamemsg gamemsg__turn">
+	    <div class="gameinfo__msg msg__turn">
+            It is your turn
+	    </div>
+	</div>
+	
+	<div class="window__gamemsg gamemsg__roundover">
+	    <div class="gameinfo__msg msg__roundover">
+            Won this round. Get ready to the next.
+	    </div>
+	</div>
+	
+	<div class="window__gamemsg gamemsg__gameover">
+	    <div class="gameinfo__msg msg__gamewin">
+            VICTORY
+	    </div>
+	    <div class="gameinfo__msg">
+	        Play again?
+	    </div>
+	    <div class="gamemsg__playAgain">
+            <button class="js_playAgain_btn_nope">no</button>
+            <button class="js_playAgain_btn_yes">yes</button>
+	    </div>
+    </div>
+    
+</fest:template>
+
+
+

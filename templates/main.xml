@@ -1,0 +1,48 @@
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="json">
+
+    <div class="window">
+        <div class="window__header">
+            <a href="#" class="window__a_decoration-none" >
+                <span class="window__span_hover-blue window__span_green"> Connect FOUR </span>
+            </a>
+        </div>
+        <div class="window__menu">
+            <a href="#rooms" class="window__a_decoration-none">
+                <span class="window__span_hover-blue window__span_orange">Start</span>
+            </a>
+            <a href="#scoreboard" class="window__a_decoration-none">
+                <span class="window__span_hover-blue window__span_orange">Score</span>
+            </a>
+		    <a href="#login" class="window__a_decoration-none">
+        		<span class="menu__js_login_btn window__span_hover-blue window__span_orange">Log in</span>
+        	</a>
+		    <a href="#" class="window__a_decoration-none">
+        		<span class="menu__js_logout_btn window__span_hover-blue window__span_orange">Log out</span>
+        	</a>
+		    <a href="#signup" class="window__a_decoration-none">
+        		<span class="menu__js_signup_btn window__span_orange window__span_hover-blue window__span_text-size-little">Register now!</span>
+        	</a>
+        </div>
+        <div class="window__information">
+            <div class="information__greeting">
+                    Hello, 
+                    <span class="msg__data">
+                        <fest:value>json.name</fest:value>
+                    </span>!
+            </div>   
+            <div class="information__gamesPlayed">
+                    Games you played 
+                    <span class="msg__data">
+                        <fest:value>json.gamesPlayed</fest:value>
+                    </span>
+            </div>
+            <div class="information__gamesWon">
+                    Games you won 
+                    <span class="msg__data">
+                        <fest:value>json.gamesWon</fest:value>
+                    </span>
+            </div>
+        </div>
+    </div>
+</fest:template>
+

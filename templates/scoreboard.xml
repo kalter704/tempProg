@@ -1,0 +1,31 @@
+<fest:template xmlns:fest="http://fest.mail.ru" context_name="scores">
+
+    <div  class="window">
+        <a href="#" class="window__a_decoration-none" >
+            <span class="window__span_hover-blue window__span_green"> Connect FOUR </span>
+        </a>
+        <div class="window__list">
+            <h4 class = "window__header_align-center_white">Score BOARD</h4>
+            <div class="scoreList">
+                        <span class="scoreList__item__name">Name</span>
+                        <span class="scoreList__item__score">Won games</span>
+                        <fest:each iterate="scores" index="i">
+                        <div class="scoreList__item">
+                            <span class="scoreList__item__name">
+                                <fest:value>scores[i].name</fest:value> 
+                            </span>
+                            <span class="scoreList__item__score"> 
+                                <fest:value>scores[i].score</fest:value> 
+                            </span>
+                        </div>
+                    </fest:each>      
+            </div>
+        </div>   
+        <div class="window__menu"> 
+		    <a href="#" class="window__a_decoration-none">
+		        <span class="window__span_orange window__span_hover-blue">Back</span>
+		    </a>
+		</div>
+    </div>
+</fest:template>
+
